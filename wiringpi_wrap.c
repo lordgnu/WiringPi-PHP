@@ -984,7 +984,7 @@ static void SWIG_Php_SetModule(swig_module_info *pointer) {
 
 /* -------- TYPES TABLE (BEGIN) -------- */
 
-#define SWIGTYPE_p_uint8_t swig_types[0]
+#define SWIGTYPE_p_unsigned_char swig_types[0]
 static swig_type_info *swig_types[2];
 static swig_module_info swig_module = {swig_types, 1, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
@@ -1079,16 +1079,16 @@ extern "C" {
 
 /* -------- TYPE CONVERSION AND EQUIVALENCE RULES (BEGIN) -------- */
 
-static swig_type_info _swigt__p_uint8_t = {"_p_uint8_t", "uint8_t *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_unsigned_char = {"_p_unsigned_char", "unsigned char *", 0, 0, (void*)0, 0};
 
 static swig_type_info *swig_type_initial[] = {
-  &_swigt__p_uint8_t,
+  &_swigt__p_unsigned_char,
 };
 
-static swig_cast_info _swigc__p_uint8_t[] = {  {&_swigt__p_uint8_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_unsigned_char[] = {  {&_swigt__p_unsigned_char, 0, 0, 0},{0, 0, 0, 0}};
 
 static swig_cast_info *swig_cast_initial[] = {
-  _swigc__p_uint8_t,
+  _swigc__p_unsigned_char,
 };
 
 
@@ -1096,7 +1096,7 @@ static swig_cast_info *swig_cast_initial[] = {
 
 /* end header section */
 /* vdecl subsection */
-static int le_swig__p_uint8_t=0; /* handle for _p_uint8_t */
+static int le_swig__p_unsigned_char=0; /* handle for _p_unsigned_char */
 /* end vdecl subsection */
 /* wrapper section */
 ZEND_NAMED_FUNCTION(_wrap_wiringPiSetup) {
@@ -1686,7 +1686,7 @@ fail:
 
 ZEND_NAMED_FUNCTION(_wrap_wiringPiSPIDataRW) {
   int arg1 ;
-  uint8_t *arg2 = (uint8_t *) 0 ;
+  unsigned char *arg2 = (unsigned char *) 0 ;
   int arg3 ;
   zval **args[3];
   int result;
@@ -1703,8 +1703,8 @@ ZEND_NAMED_FUNCTION(_wrap_wiringPiSPIDataRW) {
   /*@SWIG@*/;
   
   {
-    if(SWIG_ConvertPtr(*args[1], (void **) &arg2, SWIGTYPE_p_uint8_t, 0) < 0) {
-      SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of wiringPiSPIDataRW. Expected SWIGTYPE_p_uint8_t");
+    if(SWIG_ConvertPtr(*args[1], (void **) &arg2, SWIGTYPE_p_unsigned_char, 0) < 0) {
+      SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of wiringPiSPIDataRW. Expected SWIGTYPE_p_unsigned_char");
     }
   }
   
@@ -1756,8 +1756,8 @@ fail:
 }
 
 
-static ZEND_RSRC_DTOR_FUNC(_wrap_destroy_p_uint8_t) {
-  /* No destructor for simple type _p_uint8_t */
+static ZEND_RSRC_DTOR_FUNC(_wrap_destroy_p_unsigned_char) {
+  /* No destructor for simple type _p_unsigned_char */
   efree(rsrc->ptr);
 }
 /* end wrapper section */
@@ -2066,8 +2066,8 @@ SWIG_PropagateClientData(void) {
 ZEND_INIT_MODULE_GLOBALS(wiringpi, wiringpi_init_globals, wiringpi_destroy_globals);
 
 /* Register resource destructors for pointer types */
-le_swig__p_uint8_t=zend_register_list_destructors_ex(_wrap_destroy_p_uint8_t,NULL,(char *)(SWIGTYPE_p_uint8_t->name),module_number);
-SWIG_TypeClientData(SWIGTYPE_p_uint8_t,&le_swig__p_uint8_t);
+le_swig__p_unsigned_char=zend_register_list_destructors_ex(_wrap_destroy_p_unsigned_char,NULL,(char *)(SWIGTYPE_p_unsigned_char->name),module_number);
+SWIG_TypeClientData(SWIGTYPE_p_unsigned_char,&le_swig__p_unsigned_char);
 CG(active_class_entry) = NULL;
 /* end oinit subsection */
 

@@ -111,8 +111,8 @@ abstract class wiringpi {
 		return wiringPiSPIGetFd($channel);
 	}
 
-	static function wiringPiSPIDataRW($channel,$INPUT,$len) {
-		return wiringPiSPIDataRW($channel,$INPUT,$len);
+	static function wiringPiSPIDataRW($channel,$s,$len) {
+		return wiringPiSPIDataRW($channel,$s,$len);
 	}
 
 	static function wiringPiSPISetup($channel,$speed) {
