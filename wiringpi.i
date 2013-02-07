@@ -26,8 +26,13 @@ extern int   serialDataAvail (int fd) ;
 extern int   serialGetchar   (int fd) ;
 extern void  serialPrintf    (int fd, char *message, ...) ;
 
+extern int   wiringPiSPIGetFd   (int channel) ;
+extern int   wiringPiSPIDataRW  (int channel, char *data, int len) ;
+extern int   wiringPiSPISetup   (int channel, int speed) ;
+
 %{
 #include "WiringPi/wiringPi/wiringPi.h"
 #include "WiringPi/wiringPi/wiringShift.h"
 #include "WiringPi/wiringPi/wiringSerial.h"
+#include "WiringPi/wiringPi/wiringPiSPI.h"
 %}
