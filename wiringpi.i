@@ -1,4 +1,5 @@
 %module wiringpi
+%include "typemaps.i"
 
 %apply unsigned char { uint8_t };
 
@@ -27,7 +28,7 @@ extern int   serialGetchar   (int fd) ;
 extern void  serialPrintf    (int fd, char *message, ...) ;
 
 extern int   wiringPiSPIGetFd   (int channel) ;
-extern int   wiringPiSPIDataRW  (int channel, uint8_t *data, int len) ;
+extern int   wiringPiSPIDataRW  (int channel, uint8_t *INPUT, int len) ;
 extern int   wiringPiSPISetup   (int channel, int speed) ;
 
 %{
