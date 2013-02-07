@@ -984,8 +984,9 @@ static void SWIG_Php_SetModule(swig_module_info *pointer) {
 
 /* -------- TYPES TABLE (BEGIN) -------- */
 
-static swig_type_info *swig_types[1];
-static swig_module_info swig_module = {swig_types, 0, 0, 0, 0, 0};
+#define SWIGTYPE_p_uint8_t swig_types[0]
+static swig_type_info *swig_types[2];
+static swig_module_info swig_module = {swig_types, 1, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -1078,14 +1079,16 @@ extern "C" {
 
 /* -------- TYPE CONVERSION AND EQUIVALENCE RULES (BEGIN) -------- */
 
+static swig_type_info _swigt__p_uint8_t = {"_p_uint8_t", "uint8_t *", 0, 0, (void*)0, 0};
 
 static swig_type_info *swig_type_initial[] = {
-  NULL
+  &_swigt__p_uint8_t,
 };
 
+static swig_cast_info _swigc__p_uint8_t[] = {  {&_swigt__p_uint8_t, 0, 0, 0},{0, 0, 0, 0}};
 
 static swig_cast_info *swig_cast_initial[] = {
-  NULL
+  _swigc__p_uint8_t,
 };
 
 
@@ -1093,6 +1096,7 @@ static swig_cast_info *swig_cast_initial[] = {
 
 /* end header section */
 /* vdecl subsection */
+static int le_swig__p_uint8_t=0; /* handle for _p_uint8_t */
 /* end vdecl subsection */
 /* wrapper section */
 ZEND_NAMED_FUNCTION(_wrap_wiringPiSetup) {
@@ -1682,7 +1686,7 @@ fail:
 
 ZEND_NAMED_FUNCTION(_wrap_wiringPiSPIDataRW) {
   int arg1 ;
-  char *arg2 = (char *) 0 ;
+  uint8_t *arg2 = (uint8_t *) 0 ;
   int arg3 ;
   zval **args[3];
   int result;
@@ -1698,16 +1702,11 @@ ZEND_NAMED_FUNCTION(_wrap_wiringPiSPIDataRW) {
   arg1 = (int) Z_LVAL_PP(args[0]);
   /*@SWIG@*/;
   
-  
-  /*@SWIG:/usr/local/share/swig/2.0.9/php/utils.i,62,CONVERT_STRING_IN@*/
-  if ((*args[1])->type==IS_NULL) {
-    arg2 = (char *) 0;
-  } else {
-    convert_to_string_ex(args[1]);
-    arg2 = (char *) Z_STRVAL_PP(args[1]);
+  {
+    if(SWIG_ConvertPtr(*args[1], (void **) &arg2, SWIGTYPE_p_uint8_t, 0) < 0) {
+      SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of wiringPiSPIDataRW. Expected SWIGTYPE_p_uint8_t");
+    }
   }
-  /*@SWIG@*/;
-  
   
   /*@SWIG:/usr/local/share/swig/2.0.9/php/utils.i,7,CONVERT_INT_IN@*/
   convert_to_long_ex(args[2]);
@@ -1757,6 +1756,10 @@ fail:
 }
 
 
+static ZEND_RSRC_DTOR_FUNC(_wrap_destroy_p_uint8_t) {
+  /* No destructor for simple type _p_uint8_t */
+  efree(rsrc->ptr);
+}
 /* end wrapper section */
 /* class entry subsection */
 
@@ -2061,6 +2064,10 @@ SWIG_PropagateClientData(void) {
 
 /* oinit subsection */
 ZEND_INIT_MODULE_GLOBALS(wiringpi, wiringpi_init_globals, wiringpi_destroy_globals);
+
+/* Register resource destructors for pointer types */
+le_swig__p_uint8_t=zend_register_list_destructors_ex(_wrap_destroy_p_uint8_t,NULL,(char *)(SWIGTYPE_p_uint8_t->name),module_number);
+SWIG_TypeClientData(SWIGTYPE_p_uint8_t,&le_swig__p_uint8_t);
 CG(active_class_entry) = NULL;
 /* end oinit subsection */
 
