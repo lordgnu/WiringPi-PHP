@@ -28,7 +28,7 @@ extern int   serialGetchar   (int fd) ;
 extern void  serialPrintf    (int fd, char *message, ...) ;
 
 extern int   wiringPiSPIGetFd   (int channel) ;
-extern int   wiringPiSPIDataRW  (int channel, unsigned char *s, int len) ;
+extern int   wiringPiSPIDataRW  (int channel, char *data, int len) ;
 extern int   wiringPiSPISetup   (int channel, int speed) ;
 
 %{
